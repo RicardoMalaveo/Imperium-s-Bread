@@ -1,6 +1,8 @@
 using JetBrains.Annotations;
 using System.Collections;
+using UnityEditor.Rendering.LookDev;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -17,6 +19,13 @@ public class PlayerMovement : MonoBehaviour
     private bool isDashing;
     private bool canDash;
 
+    //Fall damage variables
+    public CapsuleCollider capsuleCharacterCollider;
+    public CameraBehavior cameraBehavior;
+    private float groundedDistance;
+    public float groundedDistanceBuffer = 0.1F;
+    bool isGrounded;
+    bool wasGrounded;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -27,13 +36,18 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        groundedDistance = (capsuleCharacterCollider.height / 2) + groundedDistanceBuffer;
 
-
-
+        CheckGround();
+        if (!canDash)
+        {
+            Debug.Log("can't dash");
+        }
     }
 
     private void FixedUpdate()
     {
+
         movementInput.x = Input.GetAxis("Horizontal");
         movementInput.y = Input.GetAxis("Vertical");
         var dashInput = Input.GetButtonDown("Jump");
@@ -61,10 +75,24 @@ public class PlayerMovement : MonoBehaviour
             ricktusRB.linearVelocity = dashOrientation * dashSpeed;
         }
 
-        if (IsGrounded())
+        if(isGrounded)
         {
             canDash = true;
         }
+
+        if (!wasGrounded && isGrounded)
+        {
+            TakeDamage();
+            Debug.Log("taking damage");
+        }
+
+        wasGrounded = isGrounded;
+    }
+
+    public void TakeDamage()
+    {
+        Coroutine coroutine = StartCoroutine(cameraBehavior.CameraShake(0.2F));
+
     }
 
     private IEnumerator StopDash ()
@@ -73,8 +101,20 @@ public class PlayerMovement : MonoBehaviour
         isDashing = false;
     }
 
-    bool IsGrounded()
+    void CheckGround()
     {
-        return Physics.Raycast(transform.position, -Vector3.up, 0.1f);
+        RaycastHit hit;
+        Color rayColor;
+        if (Physics.Raycast(transform.position, -transform.up, out hit, groundedDistanceBuffer))
+        {
+            isGrounded = true;
+            rayColor = Color.green;
+        }
+        else
+        {
+            isGrounded= false;
+            rayColor = Color.red;
+        }
+        Debug.DrawRay(capsuleCharacterCollider.bounds.center, Vector3.down * (groundedDistance + groundedDistanceBuffer), rayColor);
     }
-}
+    }
