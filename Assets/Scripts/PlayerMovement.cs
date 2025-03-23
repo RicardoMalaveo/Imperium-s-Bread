@@ -23,9 +23,16 @@ public class PlayerMovement : MonoBehaviour
     public CapsuleCollider capsuleCharacterCollider;
     public CameraBehavior cameraBehavior;
     private float groundedDistance;
-    public float groundedDistanceBuffer = 0.1F;
-    bool isGrounded;
-    bool wasGrounded;
+    private float groundedDistanceBuffer = 0.1F;
+    private float minimumFallDistance = 0.05F;
+    private bool wasFalling;
+    private float startOfFall;
+    private bool isGrounded;
+    private bool wasGrounded;
+
+    //mouse variables to manage character direction
+    public GameObject playerSprite;
+    public Vector3 mouseLocation;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -39,18 +46,15 @@ public class PlayerMovement : MonoBehaviour
         groundedDistance = (capsuleCharacterCollider.height / 2) + groundedDistanceBuffer;
 
         CheckGround();
-        if (!canDash)
-        {
-            Debug.Log("can't dash");
-        }
     }
 
     private void FixedUpdate()
     {
-
+        mouseLocation = Input.mousePosition;
         movementInput.x = Input.GetAxis("Horizontal");
         movementInput.y = Input.GetAxis("Vertical");
         var dashInput = Input.GetButtonDown("Jump");
+        CharacterDirection();
 
 
         ricktusRB.linearVelocity = new Vector3(movementInput.x * movementSpeed, ricktusRB.linearVelocity.y, movementInput.y * movementSpeed);
@@ -80,10 +84,14 @@ public class PlayerMovement : MonoBehaviour
             canDash = true;
         }
 
+        if (!wasFalling && isFalling)
+        {
+            startOfFall = transform.position.y;
+        }
+
         if (!wasGrounded && isGrounded)
         {
             TakeDamage();
-            Debug.Log("taking damage");
         }
 
         wasGrounded = isGrounded;
@@ -91,8 +99,28 @@ public class PlayerMovement : MonoBehaviour
 
     public void TakeDamage()
     {
-        Coroutine coroutine = StartCoroutine(cameraBehavior.CameraShake(0.2F));
+        canDash = false;
+        float fallDistance = startOfFall - transform.position.y;
 
+        if(fallDistance > minimumFallDistance)
+        {
+            canDash = true;
+            Coroutine coroutine = StartCoroutine(cameraBehavior.CameraShake(0.2F));
+            Debug.Log("Player fell" + (startOfFall - transform.position.y) + "units");
+            Debug.Log("taking damage");
+        }
+    }
+
+    public void CharacterDirection()
+    {
+        if(mouseLocation.x > Screen.currentResolution.width/2)
+        {
+            playerSprite.transform.localScale = new Vector3(-1, 1, 1);
+        }
+        else
+        {
+            playerSprite.transform.localScale = new Vector3(1, 1, 1);
+        }
     }
 
     private IEnumerator StopDash ()
@@ -116,5 +144,13 @@ public class PlayerMovement : MonoBehaviour
             rayColor = Color.red;
         }
         Debug.DrawRay(capsuleCharacterCollider.bounds.center, Vector3.down * (groundedDistance + groundedDistanceBuffer), rayColor);
+    }
+
+    bool isFalling 
+    { 
+        get 
+        {
+            return (!isGrounded && ricktusRB.linearVelocity.y < 0); 
+        } 
     }
     }
