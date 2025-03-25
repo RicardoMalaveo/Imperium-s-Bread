@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     public float movementSpeed;
     public float staminaLevel = 1;
     private Vector2 movementInput;
+    public Transform playerBody;
 
     //Dash variables
     [SerializeField] public float dashSpeed = 5F;
@@ -106,8 +107,6 @@ public class PlayerMovement : MonoBehaviour
         {
             canDash = true;
             Coroutine coroutine = StartCoroutine(cameraBehavior.CameraShake(0.2F));
-            Debug.Log("Player fell" + (startOfFall - transform.position.y) + "units");
-            Debug.Log("taking damage");
         }
     }
 
@@ -115,11 +114,11 @@ public class PlayerMovement : MonoBehaviour
     {
         if(mouseLocation.x > Screen.currentResolution.width/2)
         {
-            playerSprite.transform.localScale = new Vector3(-1, 1, 1);
+            playerBody.transform.localRotation = Quaternion.Euler(playerBody.rotation.x, 180, playerBody.rotation.z);
         }
         else
         {
-            playerSprite.transform.localScale = new Vector3(1, 1, 1);
+            playerBody.transform.localRotation = Quaternion.Euler(playerBody.rotation.x, 0, playerBody.rotation.z);
         }
     }
 

@@ -1071,11 +1071,11 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0.13156177, y: -0, z: -0, w: 0.991308}
-  m_LocalPosition: {x: 1.6300004, y: 16.500004, z: -47.3}
-  m_LocalScale: {x: 0.41824389, y: 0.41824394, z: 0.41824394}
+  m_LocalPosition: {x: -0.29363742, y: 6.658094, z: -1.0587639}
+  m_LocalScale: {x: 0.008924909, y: 0.00892491, z: 0.00892491}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2057911515}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 15.12, y: 0, z: 0}
 --- !u!114 &330585547
 MonoBehaviour:
@@ -1133,6 +1133,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da72103fd9c6c1943aaefe4f2dcc29d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectToFollow: {fileID: 2057911515}
+  offset: {x: 0, y: 0.35, z: -1.1}
+  followSpeed: 10
+  lookSpeed: 10
+  rotationSpeed: 0.5
 --- !u!1 &344281347
 GameObject:
   m_ObjectHideFlags: 0
@@ -3268,7 +3273,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
@@ -3282,16 +3287,16 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: -1372625422
   m_Radius: 0.1
-  m_Speed: 0.25
-  m_Acceleration: 0.4
+  m_Speed: 0.8
+  m_Acceleration: 0.85
   avoidancePriority: 50
-  m_AngularSpeed: 0.35
-  m_StoppingDistance: 0.12
+  m_AngularSpeed: 0.6
+  m_StoppingDistance: 0.075
   m_AutoTraverseOffMeshLink: 0
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 0.1219648
-  m_BaseOffset: 0.5
+  m_Height: 0.21
+  m_BaseOffset: 1
   m_WalkableMask: 1
   m_ObstacleAvoidanceType: 4
 --- !u!114 &930201757
@@ -4356,7 +4361,7 @@ MonoBehaviour:
   m_VoxelSize: 0.016666668
   m_MinRegionArea: 50
   m_NavMeshData: {fileID: 23800000, guid: 5a89d824473908a4ab514d1b03a27ffc, type: 2}
-  m_BuildHeightMesh: 0
+  m_BuildHeightMesh: 1
 --- !u!1 &1178407704
 GameObject:
   m_ObjectHideFlags: 0
@@ -6981,6 +6986,7 @@ MonoBehaviour:
   ricktusRB: {fileID: 2057911512}
   movementSpeed: 0.7
   staminaLevel: 1
+  playerBody: {fileID: 2057911515}
   dashSpeed: 1.5
   dashTime: 0.25
   capsuleCharacterCollider: {fileID: 2057911516}
@@ -7082,7 +7088,6 @@ Transform:
   m_LocalScale: {x: 0.021339007, y: 0.021339007, z: 0.021339007}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 330585546}
   - {fileID: 711735913}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7221,6 +7226,7 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 330585546}
   - {fileID: 2057911515}
   - {fileID: 930201761}
   - {fileID: 2038755936}
