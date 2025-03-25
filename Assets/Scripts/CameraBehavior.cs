@@ -4,11 +4,9 @@ using System.Collections.Generic;
 
 public class CameraBehavior : MonoBehaviour
 {
-    
     public Transform objectToFollow;
     public Vector3 offset;
-    public float followSpeed = 10;
-    public float lookSpeed = 10;
+    public float followSpeed;
     [SerializeField][Range(0, 10)] float rotationSpeed = 0.5f;
 
     public IEnumerator CameraShake(float duration)
@@ -24,14 +22,6 @@ public class CameraBehavior : MonoBehaviour
         transform.localPosition = originalLoc;
     }
 
-    //public void LookAtTarget()
-    //{
-    //    Vector3 lookDirection = objectToFollow.position - transform.position;
-    //    Quaternion rotation = Quaternion.LookRotation(lookDirection, Vector3.up);
-
-    //    transform.rotation = Quaternion.Lerp(transform.rotation, rotation, lookSpeed * Time.deltaTime);
-    //}
-
     public void MoveToTarget()
     {
         Vector3 targerPosition = new Vector3(objectToFollow.transform.position.x + offset.x, objectToFollow.transform.position.y + offset.y, objectToFollow.transform.position.z + offset.z);
@@ -40,7 +30,6 @@ public class CameraBehavior : MonoBehaviour
 
     private void FixedUpdate()
     {
-        //LookAtTarget();
         MoveToTarget();
     }
 
