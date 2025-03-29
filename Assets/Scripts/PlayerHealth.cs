@@ -4,8 +4,7 @@ using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
-
-public class EnemyHealth : MonoBehaviour
+public class PlayerHealth : MonoBehaviour
 {
     [SerializeField]
     private float InvulnerabilityTime = 0.2F;
@@ -17,7 +16,7 @@ public class EnemyHealth : MonoBehaviour
 
     public void Damage(int weaponDamage)
     {
-        if(!hit && currentHealth > 0)
+        if (!hit && currentHealth > 0)
         {
             hit = true;
             Debug.Log("Dealing damage");

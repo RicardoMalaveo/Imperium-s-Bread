@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.TextCore.Text;
@@ -5,106 +6,59 @@ using UnityEngine.TextCore.Text;
 public class KnifeAttack : MonoBehaviour
 {
     [SerializeField]
-    private int damageAmount = 40;
+    private int weaponDamage = 20;
 
-    private Character player;
+    public CapsuleCollider frontKnifeCol;
+    public CapsuleCollider backKnifeCol;
 
-    private Rigidbody kitchenKnife;
-
-    //private MeleeAttackManager meleeAttackManager;
+    private MeleeAttackManager meleeAttackManager;
 
     private Vector3 attackDirection;
 
+    public EnemyHealth enemyHealth;
+
     private bool collided;
 
-    private bool forwardStrike;
+    private bool Strike;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        player = GetComponent<Character>();
-
-        kitchenKnife = GetComponent<Rigidbody>();
-
-        //meleeAttackManager = GetComponent<MeleeAttackManager>();
 
     }
+
 
     private void FixedUpdate()
     {
-        AttackMovement();
+       if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            frontKnifeCol.enabled = true;
+            backKnifeCol.enabled = true;
+        }
+       else
+        {
+            frontKnifeCol.enabled = false;
+            backKnifeCol.enabled = false;
+        }
+
+
+       if (Strike == true)
+        {
+            Debug.Log("Attacking enemy");
+            enemyHealth.Damage(weaponDamage);
+            Strike = false;
+        }
     }
 
-    private void OnTriggerEnter(Collider collision)
+    private void OnTriggerEnter(Collider col)
     {
-        if (collision.GetComponent<EnemyHealth>())
+        if(col.gameObject.CompareTag("FungalDemon"))
         {
-            CollisionHandler(collision.GetComponent<EnemyHealth>());
+            Strike = true;
+            Debug.Log(col.gameObject.CompareTag("FungalDemon"));
         }
+    }
+
         
-    }
-
-    private void CollisionHandler(EnemyHealth enemyHealth)
-    {
-        if(enemyHealth.canBePushed && Input.GetAxis("Vertical") < 0)
-        {
-            attackDirection = Vector3.forward;
-
-            forwardStrike = true;
-
-            collided = true;
-        }
-
-        if(enemyHealth.canBePushed && Input.GetAxis("Vertical") > 0)
-        {
-            attackDirection = Vector3.back;
-
-            forwardStrike = true;
-
-            collided = true;
-        }
-
-        if (enemyHealth.canBePushed && Input.GetAxis("Horizontal") < 0)
-        {
-            attackDirection = new Vector3(0, 0, -1);
-
-            forwardStrike = true;
-
-            collided = true;
-        }
-
-        if (enemyHealth.canBePushed && Input.GetAxis("Horizontal") > 0)
-        {
-            attackDirection = new Vector3( 0, 0, 1);
-
-            forwardStrike = true;
-
-            collided = true;
-        }
-
-        enemyHealth.Damage(damageAmount);
-
-        //StartCoroutine(NolongerColliding());
-    }
-
-    private void AttackMovement()
-    {
-        if(forwardStrike)
-        {
-            //kitchenKnife.AddForce(attackDirection * meleeAttackManager.upwardsForce);
-        }
-        else 
-        {
-            //kitchenKnife.AddForce(attackDirection * meleeAttackManager.backForce);
-        }
-    }
-
-    //private IEnumerator NolongerColliding()
-    //{
-    //    yield return new WaitForSeconds(meleeAttackManager.movementRime);
-
-    //    collided = false;
-    //    forwardStrike = false;
-    //}
 }

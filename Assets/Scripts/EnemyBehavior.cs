@@ -22,6 +22,14 @@ public class EnemyBehavior : MonoBehaviour
     public float secondsBeforeMoving;
     bool walkPointReached = false;
 
+    //Attacking variables
+    public float secondsBeforeAttack = 1F;
+    public float attackDuration = 0.2F;
+    public int enemyBaseDamage;
+    public EnemyAttack enemyAttack;
+    public bool startAttack = false;
+
+
     //States
     public float watchRange;
     public float attackRange;
@@ -75,14 +83,16 @@ public class EnemyBehavior : MonoBehaviour
     private void ChasePlayer()
     {
         agent.SetDestination(ricktus.position);
+        transform.LookAt(ricktus);
     }
 
     private void AttackPlayer()
     {
+
         agent.SetDestination(transform.position);
 
         transform.LookAt(ricktus);
-        Debug.Log("Attacking player");
+        startAttack = true;
     }
 
     private void OnDrawGizmosSelected()

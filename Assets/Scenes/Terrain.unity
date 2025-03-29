@@ -258,15 +258,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6af2d410bf489d842a543a60d605af5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  terrains: []
+  terrains:
+  - {fileID: 387454117}
   splatmapResolution: 256
   colorMapResolution: 256
   layerSettings: []
   autoRepaint: 0
   terrainListeners: []
   bounds:
-    m_Center: {x: NaN, y: NaN, z: NaN}
-    m_Extent: {x: NaN, y: NaN, z: NaN}
+    m_Center: {x: 750, y: 450, z: 750}
+    m_Extent: {x: 750, y: 450, z: 750}
   filterShader: {fileID: 0}
 --- !u!154 &387454116
 TerrainCollider:

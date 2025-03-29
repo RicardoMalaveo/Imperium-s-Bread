@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Floor
   - WayPoint
+  - FungalDemon
   layers:
   - Default
   - TransparentFX
