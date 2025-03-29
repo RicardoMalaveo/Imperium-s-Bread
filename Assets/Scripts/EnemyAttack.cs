@@ -24,13 +24,6 @@ public class EnemyAttack : MonoBehaviour
     private bool Strike;
 
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-
-    }
-
-
     private void FixedUpdate()
     {
         if (enemyBehavior.startAttack)

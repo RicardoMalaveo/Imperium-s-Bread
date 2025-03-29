@@ -4,6 +4,7 @@ using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 public class PlayerHealth : MonoBehaviour
 {
     [SerializeField]
@@ -11,9 +12,17 @@ public class PlayerHealth : MonoBehaviour
 
     private bool hit;
     public bool canBePushed;
-
+    public bool playerIsDead;
     public int currentHealth = 100;
 
+    private GameManager gM;
+
+    void Start()
+    {
+        gM = GameObject.FindGameObjectWithTag("GM").GetComponent<GameManager>();
+
+        transform.position = gM.lastCheckPoint;
+    }
     public void Damage(int weaponDamage)
     {
         if (!hit && currentHealth > 0)
@@ -24,8 +33,10 @@ public class PlayerHealth : MonoBehaviour
 
             if (currentHealth <= 0)
             {
+                playerIsDead = true;
                 currentHealth = 0;
-                gameObject.SetActive(false);
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                transform.position = gM.lastCheckPoint;
             }
             else
             {

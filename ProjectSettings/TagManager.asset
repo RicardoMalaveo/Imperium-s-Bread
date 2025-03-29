@@ -8,6 +8,8 @@ TagManager:
   - WayPoint
   - FungalDemon
   - DeadZone
+  - CheckPoint
+  - GM
   layers:
   - Default
   - TransparentFX

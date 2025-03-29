@@ -7,8 +7,16 @@ public class CameraBehavior : MonoBehaviour
     public Transform objectToFollow;
     public Vector3 offset;
     public float followSpeed;
-    [SerializeField][Range(0, 10)] float rotationSpeed = 0.5f;
+    public PlayerHealth playerHealth;
 
+    private GameManager gM;
+
+    void Start()
+    {
+        gM = GameObject.FindGameObjectWithTag("GM").GetComponent<GameManager>();
+
+        transform.position = gM.lastCheckPoint;
+    }
     public IEnumerator CameraShake(float duration)
     {
         float shakeQuantity = 0.5F;
