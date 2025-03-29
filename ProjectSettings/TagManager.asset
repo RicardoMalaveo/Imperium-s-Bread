@@ -7,6 +7,7 @@ TagManager:
   - Floor
   - WayPoint
   - FungalDemon
+  - DeadZone
   layers:
   - Default
   - TransparentFX

@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 5e701f81a974db24fa4868b93cb114db
+  - enabled: 1
     path: Assets/Scenes/Bakery-Kitchen.unity
     guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects:
