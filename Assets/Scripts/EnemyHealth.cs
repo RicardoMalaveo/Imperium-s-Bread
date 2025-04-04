@@ -9,7 +9,8 @@ public class EnemyHealth : MonoBehaviour
 {
     [SerializeField]
     private float InvulnerabilityTime = 0.2F;
-    public GameManager gameManager;
+    [SerializeField]
+    private PickableObjectData PickableObjectData;
     public GameObject holyFlame;
     private int favourPoints = 10;
     private bool hit;
@@ -28,8 +29,9 @@ public class EnemyHealth : MonoBehaviour
             if (currentHealth <= 0)
             {
                 currentHealth = 0;
-                Destroy(gameObject);
+                Destroy(this.gameObject);
                 DropItem();
+                PickableObjectData.favoursCount += favourPoints;
                 //enemy gets destroyed and there are particle effects on the place, along with items.
             }
             else
@@ -41,7 +43,6 @@ public class EnemyHealth : MonoBehaviour
 
     void DropItem()
     {
-        gameManager.favourPoints += 10;
         int randomNumber = Random.Range(1, 3);
         if(randomNumber <= 1 )
         {

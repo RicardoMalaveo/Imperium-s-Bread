@@ -2,20 +2,16 @@ using UnityEngine;
 
 public class CheckPoint : MonoBehaviour
 {
-    private GameManager gM;
+    [SerializeField]
+    private PlayerCheckPointLocations playerCheckPoint;
     public GameObject shopButton;
     public bool isPlayerInMarket;
-
-    void Start()
-    {
-        gM = GameObject.FindGameObjectWithTag("GM").GetComponent<GameManager>();
-    }
 
     void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag( "Player"))
         {
-            gM.lastCheckPoint = transform.position;
+            playerCheckPoint.currentCheckPoint = transform.position;
 
             isPlayerInMarket = true;
             EnterMarketCheckpoint();

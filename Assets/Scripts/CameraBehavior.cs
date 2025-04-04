@@ -8,14 +8,7 @@ public class CameraBehavior : MonoBehaviour
     public Vector3 offset;
     public float followSpeed;
     public PlayerHealth playerHealth;
-    private GameManager gM;
 
-    void Start()
-    {
-        gM = GameObject.FindGameObjectWithTag("GM").GetComponent<GameManager>();
-
-        transform.position = gM.lastCheckPoint;
-    }
     public IEnumerator CameraShake(float duration)
     {
         float shakeQuantity = 0.5F;
@@ -39,5 +32,4 @@ public class CameraBehavior : MonoBehaviour
     {
         MoveToTarget();
     }
-
 }

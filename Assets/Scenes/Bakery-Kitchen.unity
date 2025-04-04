@@ -717,6 +717,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd5754318e4a93a4c92beaf127f1ed46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerCheckPoint: {fileID: 11400000, guid: c712bd2090291f64ab29c0c111eea882, type: 2}
   shopButton: {fileID: 180529275}
   isPlayerInMarket: 0
 --- !u!136 &115355350
@@ -1606,54 +1607,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 930201761}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 90}
---- !u!1 &319731471
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 319731473}
-  - component: {fileID: 319731472}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: GM
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &319731472
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 319731471}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9f2ee94e37b2944ba60c075e1549e3e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lastCheckPoint: {x: -0.32842, y: 6.306, z: -0.04942882}
-  favourPoints: 0
-  holyFlameCount: 0
-  holyFlareMaxCount: 5
---- !u!4 &319731473
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 319731471}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -1742,7 +1695,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0.13156177, y: -0, z: -0, w: 0.991308}
-  m_LocalPosition: {x: -0.29363742, y: 6.658094, z: -1.0587639}
+  m_LocalPosition: {x: -0.32842, y: 6.646, z: -1.0587639}
   m_LocalScale: {x: 0.008924909, y: 0.00892491, z: 0.00892491}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4843,7 +4796,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InvulnerabilityTime: 0.2
-  gameManager: {fileID: 319731472}
+  PickableObjectData: {fileID: 11400000, guid: ac33e56992a31c74bbcb36792e181965, type: 2}
   holyFlame: {fileID: 8692758004510351365, guid: 6ade98365bce09a41bcafc99d315d8cc, type: 3}
   canBePushed: 1
   currentHealth: 100
@@ -6201,7 +6154,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -123.2, y: -37.3}
+  m_AnchoredPosition: {x: -123.19995, y: -37.30005}
   m_SizeDelta: {x: 90, y: 29}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1238300818
@@ -9611,7 +9564,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3b9c36f5f1a4d346b60bca1b4587f35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameManager: {fileID: 319731472}
+  PickableObjectData: {fileID: 11400000, guid: ac33e56992a31c74bbcb36792e181965, type: 2}
+  playerCheckPoint: {fileID: 11400000, guid: c712bd2090291f64ab29c0c111eea882, type: 2}
   menuButton: {fileID: 1238300816}
   mainMenu: {fileID: 2035447943}
 --- !u!1 &2036287423
@@ -10285,7 +10239,7 @@ Transform:
   m_GameObject: {fileID: 2057911510}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.32842, y: 6.297, z: -0.04942882}
+  m_LocalPosition: {x: -0.32842, y: 6.306, z: -0.04942882}
   m_LocalScale: {x: 0.021339007, y: 0.021339007, z: 0.021339007}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10330,6 +10284,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InvulnerabilityTime: 0.2
+  pickableObjectData: {fileID: 11400000, guid: ac33e56992a31c74bbcb36792e181965, type: 2}
+  PlayerCheckPoint: {fileID: 11400000, guid: c712bd2090291f64ab29c0c111eea882, type: 2}
   canBePushed: 0
   playerIsDead: 0
   currentHealth: 100
@@ -10345,6 +10301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52bd494bc4f3d6e43886973c887ff726, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerCheckPoint: {fileID: 11400000, guid: c712bd2090291f64ab29c0c111eea882, type: 2}
 --- !u!114 &2057911519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10358,7 +10315,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ricktus: {fileID: 2057911510}
-  gameManager: {fileID: 319731472}
+  PickableObjectData: {fileID: 11400000, guid: ac33e56992a31c74bbcb36792e181965, type: 2}
 --- !u!1 &2118758231
 GameObject:
   m_ObjectHideFlags: 0
@@ -10616,6 +10573,5 @@ SceneRoots:
   - {fileID: 1813650263}
   - {fileID: 1858780847}
   - {fileID: 2014473279}
-  - {fileID: 319731473}
   - {fileID: 39054795}
   - {fileID: 2014891157}

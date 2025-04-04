@@ -2,22 +2,20 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using TreeEditor;
 
 public class Respawn : MonoBehaviour
 {
+    [SerializeField]
+    private PlayerCheckPointLocations playerCheckPoint;
 
-    private GameManager gM;
-    void Start()
-    {
-        gM = GameObject.FindGameObjectWithTag("GM").GetComponent<GameManager>();
-
-        transform.position = gM.lastCheckPoint;
-    }
     void OnCollisionEnter(Collision collider)
     {
         if (collider.gameObject.CompareTag("DeadZone"))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            transform.position = playerCheckPoint.currentCheckPoint;
+
+            SceneManager.LoadScene(1);
         }
     }
 }

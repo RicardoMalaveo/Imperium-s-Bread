@@ -9,19 +9,35 @@ public class PlayerHealth : MonoBehaviour
 {
     [SerializeField]
     private float InvulnerabilityTime = 0.2F;
-
+    [SerializeField]
+    private PickableObjectData pickableObjectData;
+    [SerializeField]
+    private PlayerCheckPointLocations PlayerCheckPoint;
     private bool hit;
     public bool canBePushed;
     public bool playerIsDead;
     public int currentHealth = 100;
+    private int maxHealth = 100;
+    private int healingAmount = 20;
 
-    private GameManager gM;
-
-    void Start()
+    private void Start()
     {
-        gM = GameObject.FindGameObjectWithTag("GM").GetComponent<GameManager>();
-
-        transform.position = gM.lastCheckPoint;
+        transform.position = PlayerCheckPoint.currentCheckPoint;
+    }
+    private void FixedUpdate()
+    {
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            if(pickableObjectData.holyFlameCount <= 0)
+            {
+                Debug.Log("can't heal");
+            }
+            else
+            {
+                pickableObjectData.holyFlameCount -= 1;
+                Healing();
+            }
+        }
     }
     public void Damage(int weaponDamage)
     {
@@ -35,12 +51,27 @@ public class PlayerHealth : MonoBehaviour
             {
                 playerIsDead = true;
                 currentHealth = 0;
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-                transform.position = gM.lastCheckPoint;
+                SceneManager.LoadScene(1);
+                transform.position = PlayerCheckPoint.currentCheckPoint;
             }
             else
             {
                 StartCoroutine(TurnOffHit());
+            }
+        }
+    }
+
+    void Healing()
+    {
+        if(currentHealth< maxHealth)
+        {
+            if(currentHealth + healingAmount > maxHealth)
+            {
+                currentHealth = maxHealth;
+            }
+            else
+            {
+                currentHealth += healingAmount;
             }
         }
     }

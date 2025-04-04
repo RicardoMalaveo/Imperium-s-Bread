@@ -4,7 +4,10 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
-    public GameManager GameManager;
+    [SerializeField]
+    private PickableObjectData PickableObjectData;
+    [SerializeField]
+    private PlayerCheckPointLocations playerCheckPoint;
     public GameObject menuButton;
     public GameObject mainMenu;
     public void LoadMenu()
@@ -14,8 +17,11 @@ public class SceneController : MonoBehaviour
 
     public void Play()
     {
-        GameManager.lastCheckPoint =new Vector3(-0.32842F, 6.297F, -0.04942882F);
+        PickableObjectData.holyFlameCount = 5;
+        PickableObjectData.favoursCount = 0;
+        playerCheckPoint.respawnPoint = new Vector3(-0.32842F, 6.297F, -0.04942882F);
         SceneManager.LoadScene(1);
+        playerCheckPoint.currentCheckPoint = playerCheckPoint.respawnPoint;
         Time.timeScale = 1F;
     }
 
