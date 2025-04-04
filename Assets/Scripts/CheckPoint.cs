@@ -31,7 +31,6 @@ public class CheckPoint : MonoBehaviour
             {
                 isPlayerInMarket = false;
                 ExitMarketCheckPoint();
-
             }
         }
     }
@@ -40,10 +39,6 @@ public class CheckPoint : MonoBehaviour
     {
         Debug.Log("Player entered the area");
         shopButton.SetActive(true);
-            //if player press button
-            // show store items in UI and exit button
-            //if user press exit button
-            //run ExitMarketCheckPoint() to close shop
     }
 
     void ExitMarketCheckPoint()
@@ -53,7 +48,5 @@ public class CheckPoint : MonoBehaviour
             Debug.Log("Player Left the area");
             shopButton.SetActive(false);
         }
-        //only shuts the shop down
-
     }
 }
