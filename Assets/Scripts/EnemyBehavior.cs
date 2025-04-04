@@ -77,7 +77,6 @@ public class EnemyBehavior : MonoBehaviour
             transform.LookAt(wayPoints[targetWaytPoint]);
             agent.SetDestination(wayPoints[targetWaytPoint].position);
         }
-
     }
 
     private void ChasePlayer()

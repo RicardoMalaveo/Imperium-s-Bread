@@ -17,5 +17,4 @@ public class Shop : MonoBehaviour
         shopMenu.SetActive(false);
         Time.timeScale = 1F;
     }
-
 }

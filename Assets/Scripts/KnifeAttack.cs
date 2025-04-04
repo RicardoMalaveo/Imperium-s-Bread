@@ -21,14 +21,6 @@ public class KnifeAttack : MonoBehaviour
 
     private bool Strike;
 
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-
-    }
-
-
     private void FixedUpdate()
     {
        if (Input.GetKeyDown(KeyCode.Mouse0))
@@ -56,7 +48,6 @@ public class KnifeAttack : MonoBehaviour
         if(col.gameObject.CompareTag("FungalDemon"))
         {
             Strike = true;
-            Debug.Log(col.gameObject.CompareTag("FungalDemon"));
         }
     }
 

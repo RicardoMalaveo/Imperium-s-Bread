@@ -1636,6 +1636,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lastCheckPoint: {x: -0.32842, y: 6.306, z: -0.04942882}
+  favourPoints: 0
+  holyFlameCount: 0
+  holyFlareMaxCount: 5
 --- !u!4 &319731473
 Transform:
   m_ObjectHideFlags: 0
@@ -4840,6 +4843,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InvulnerabilityTime: 0.2
+  gameManager: {fileID: 319731472}
+  holyFlame: {fileID: 8692758004510351365, guid: 6ade98365bce09a41bcafc99d315d8cc, type: 3}
   canBePushed: 1
   currentHealth: 100
 --- !u!1 &986732642
@@ -10159,6 +10164,7 @@ GameObject:
   - component: {fileID: 2057911516}
   - component: {fileID: 2057911517}
   - component: {fileID: 2057911518}
+  - component: {fileID: 2057911519}
   m_Layer: 6
   m_Name: Ricktus
   m_TagString: Player
@@ -10339,6 +10345,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52bd494bc4f3d6e43886973c887ff726, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2057911519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2057911510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bb3618a8f2594741b1479371f0da292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ricktus: {fileID: 2057911510}
+  gameManager: {fileID: 319731472}
 --- !u!1 &2118758231
 GameObject:
   m_ObjectHideFlags: 0

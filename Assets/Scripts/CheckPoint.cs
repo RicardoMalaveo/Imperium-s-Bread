@@ -15,8 +15,6 @@ public class CheckPoint : MonoBehaviour
     {
         if(other.CompareTag( "Player"))
         {
-            Debug.Log("Checkpoint Reached");
-
             gM.lastCheckPoint = transform.position;
 
             isPlayerInMarket = true;
@@ -37,7 +35,6 @@ public class CheckPoint : MonoBehaviour
 
     void EnterMarketCheckpoint()
     {
-        Debug.Log("Player entered the area");
         shopButton.SetActive(true);
     }
 
@@ -45,7 +42,6 @@ public class CheckPoint : MonoBehaviour
     {
         if (isPlayerInMarket == false)
         {
-            Debug.Log("Player Left the area");
             shopButton.SetActive(false);
         }
     }

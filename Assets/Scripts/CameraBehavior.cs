@@ -8,7 +8,6 @@ public class CameraBehavior : MonoBehaviour
     public Vector3 offset;
     public float followSpeed;
     public PlayerHealth playerHealth;
-
     private GameManager gM;
 
     void Start()

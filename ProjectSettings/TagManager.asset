@@ -10,6 +10,7 @@ TagManager:
   - DeadZone
   - CheckPoint
   - GM
+  - HolyFlame
   layers:
   - Default
   - TransparentFX

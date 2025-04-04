@@ -35,13 +35,6 @@ public class PlayerMovement : MonoBehaviour
     public GameObject playerSprite;
     public Vector3 mouseLocation;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         groundedDistance = (capsuleCharacterCollider.height / 2) + groundedDistanceBuffer;

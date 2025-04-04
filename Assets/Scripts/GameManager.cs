@@ -7,6 +7,9 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public Vector3 lastCheckPoint;
+    public int favourPoints = 0;
+    public int holyFlameCount = 0;
+    public int holyFlareMaxCount = 5;
 
 
     void Awake()
