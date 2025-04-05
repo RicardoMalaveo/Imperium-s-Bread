@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14e1499ce8689b642b4d6fe8d0943746, type: 3}
   m_Name: Player Attribute
   m_EditorClassIdentifier: 
-  _playerBaseAttack: 0
-  _playerBaseHealth: 0
+  _playerBaseAttack: 20
+  _playerBaseHealth: 100
   _playerCurrentLevel: 1
   _favoursPricePerLevel: 20
   _currentHealth: 100
-  _maxHealth: 100
