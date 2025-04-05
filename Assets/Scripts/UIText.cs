@@ -24,6 +24,7 @@ public class UIText : MonoBehaviour
         playerLevel.text = "Level " + PlayerAttribute.playerCurrentLevel.ToString();
         FavoursCount.text = PickableObject.favoursCount.ToString();
         holyFlameCount.text = PickableObject.holyFlameCount.ToString();
+        CurrentPlayerHP.text ="/ " +PlayerAttribute.currentHealth.ToString();
     }
 
 }

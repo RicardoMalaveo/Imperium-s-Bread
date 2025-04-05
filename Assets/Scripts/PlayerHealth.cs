@@ -56,6 +56,8 @@ public class PlayerHealth : MonoBehaviour
                 playerAttribute.currentHealth = 0;
                 SceneManager.LoadScene(1);
                 transform.position = PlayerCheckPoint.currentCheckPoint;
+                playerAttribute.currentHealth = playerAttribute.playerBaseHealth;
+                pickableObjectData.holyFlameCount = 5;
             }
             else
             {
