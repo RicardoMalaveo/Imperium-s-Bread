@@ -7,7 +7,6 @@ public class CameraBehavior : MonoBehaviour
     public Transform objectToFollow;
     public Vector3 offset;
     public float followSpeed;
-    public PlayerHealth playerHealth;
 
     public IEnumerator CameraShake(float duration)
     {

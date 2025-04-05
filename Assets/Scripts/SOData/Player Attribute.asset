@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14e1499ce8689b642b4d6fe8d0943746, type: 3}
+  m_Name: Player Attribute
+  m_EditorClassIdentifier: 
+  _playerBaseAttack: 0
+  _playerBaseHealth: 0
+  _playerCurrentLevel: 1
+  _favoursPricePerLevel: 20
+  _currentHealth: 100
+  _maxHealth: 100

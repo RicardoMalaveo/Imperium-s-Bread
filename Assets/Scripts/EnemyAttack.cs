@@ -58,18 +58,11 @@ public class EnemyAttack : MonoBehaviour
     {
         yield return new WaitForSeconds(1F);
         frontCol.enabled = true;
-        StartCoroutine(Attack());
-    }
-    private IEnumerator Attack()
-    {
         yield return new WaitForSeconds(0.2F);
         frontCol.enabled = false;
-        StartCoroutine(AttackDownTime());
-    }
-    private IEnumerator AttackDownTime()
-    {
         Debug.Log("downtime");
         yield return new WaitForSeconds(1);
         canAttack = true;
     }
+
 }

@@ -590,6 +590,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3b9c36f5f1a4d346b60bca1b4587f35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PickableObjectData: {fileID: 11400000, guid: ac33e56992a31c74bbcb36792e181965, type: 2}
+  playerCheckPoint: {fileID: 11400000, guid: c712bd2090291f64ab29c0c111eea882, type: 2}
+  PlayerAttribute: {fileID: 11400000, guid: 1737ef63d68c28d418e9e7fcb15060e9, type: 2}
+  menuButton: {fileID: 0}
+  mainMenu: {fileID: 0}
 --- !u!4 &1823730698
 Transform:
   m_ObjectHideFlags: 0

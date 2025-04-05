@@ -9,9 +9,11 @@ public class PickableObjectData : ScriptableObject
     private int _holyFlameCount;
     [SerializeField]
     private int _favoursCount;
+    [SerializeField]
+    private int _holyFlamePrice = 15;
 
 
-	public int holyFlameCount
+    public int holyFlameCount
 	{
 		get { return _holyFlameCount; }
 		set { _holyFlameCount = value; }
@@ -21,5 +23,10 @@ public class PickableObjectData : ScriptableObject
     {
         get { return _favoursCount; }
         set { _favoursCount = value; }
+    }
+    public int holyFlamePrice
+    {
+        get { return _holyFlamePrice; }
+        set { _holyFlamePrice = value; }
     }
 }

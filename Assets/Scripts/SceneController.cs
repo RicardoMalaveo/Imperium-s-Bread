@@ -8,6 +8,8 @@ public class SceneController : MonoBehaviour
     private PickableObjectData PickableObjectData;
     [SerializeField]
     private PlayerCheckPointLocations playerCheckPoint;
+    [SerializeField]
+    private PlayerAttribute PlayerAttribute;
     public GameObject menuButton;
     public GameObject mainMenu;
     public void LoadMenu()
@@ -17,6 +19,12 @@ public class SceneController : MonoBehaviour
 
     public void Play()
     {
+        PlayerAttribute.playerBaseAttack = 20;
+        PlayerAttribute.playerBaseHealth = 100;
+        PlayerAttribute.playerCurrentLevel = 1;
+        PlayerAttribute.favoursPricePerLevel = 20;
+
+        PlayerAttribute.currentHealth = 100;
         PickableObjectData.holyFlameCount = 5;
         PickableObjectData.favoursCount = 0;
         playerCheckPoint.respawnPoint = new Vector3(-0.32842F, 6.297F, -0.04942882F);
