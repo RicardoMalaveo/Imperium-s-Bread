@@ -18,8 +18,6 @@ public class Respawn : MonoBehaviour
         if (collider.gameObject.CompareTag("DeadZone"))
         {
             transform.position = playerCheckPoint.currentCheckPoint;
-            PlayerAttribute.currentHealth = PlayerAttribute.playerBaseHealth;
-            PickableObjectData.holyFlameCount = 5;
 
             SceneManager.LoadScene(1);
         }

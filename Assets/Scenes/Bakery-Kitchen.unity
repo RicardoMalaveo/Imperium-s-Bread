@@ -578,6 +578,7 @@ GameObject:
   - component: {fileID: 58648426}
   - component: {fileID: 58648425}
   - component: {fileID: 58648424}
+  - component: {fileID: 58648427}
   m_Layer: 0
   m_Name: WoodPlankLong (6)
   m_TagString: Untagged
@@ -653,6 +654,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1440819995}
   m_LocalEulerAnglesHint: {x: 0, y: 10.882, z: 0}
+--- !u!65 &58648427
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 58648423}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0011178424, y: 0.017877663, z: 0.0008353997}
+  m_Center: {x: -0.000008544915, y: 0.000016510487, z: 1.2732914e-13}
 --- !u!1 &85890962
 GameObject:
   m_ObjectHideFlags: 0
@@ -1355,6 +1377,7 @@ GameObject:
   - component: {fileID: 200467622}
   - component: {fileID: 200467624}
   - component: {fileID: 200467623}
+  - component: {fileID: 200467625}
   m_Layer: 0
   m_Name: WoodPlankLong (26)
   m_TagString: Untagged
@@ -1430,6 +1453,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 200467621}
   m_Mesh: {fileID: 548075944402340060, guid: 86a2879b0dd2785468177138de2e7f1e, type: 3}
+--- !u!65 &200467625
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 200467621}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0011178436, y: 0.017877666, z: 0.00083540595}
+  m_Center: {x: -0.000008544916, y: 0.000016510492, z: -0.000000007451961}
 --- !u!1 &220683802
 GameObject:
   m_ObjectHideFlags: 0
@@ -1790,11 +1834,12 @@ RectTransform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2135881522}
+  - {fileID: 1012510855}
   m_Father: {fileID: 926592538}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 12.489998, y: -5.1000977}
+  m_AnchoredPosition: {x: 16.96, y: -5.1000977}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &274132941
@@ -1817,9 +1862,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'HP  100
-
-'
+  m_text: "HP \n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d919f76b83a6f534996ce3d8490254e2, type: 2}
   m_sharedMaterial: {fileID: 6681479063745583770, guid: d919f76b83a6f534996ce3d8490254e2, type: 2}
@@ -3266,6 +3309,7 @@ GameObject:
   - component: {fileID: 440508198}
   - component: {fileID: 440508197}
   - component: {fileID: 440508196}
+  - component: {fileID: 440508199}
   m_Layer: 0
   m_Name: WoodPlankLong (7)
   m_TagString: Untagged
@@ -3341,6 +3385,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1440819995}
   m_LocalEulerAnglesHint: {x: 0, y: 10.882, z: 0}
+--- !u!65 &440508199
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 440508195}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0011178424, y: 0.017877663, z: 0.0008353997}
+  m_Center: {x: -0.000008544915, y: 0.000016510487, z: 1.2732914e-13}
 --- !u!1 &445644246
 GameObject:
   m_ObjectHideFlags: 0
@@ -3529,6 +3594,7 @@ GameObject:
   - component: {fileID: 454742701}
   - component: {fileID: 454742703}
   - component: {fileID: 454742702}
+  - component: {fileID: 454742704}
   m_Layer: 0
   m_Name: WoodPlankLong (17)
   m_TagString: Untagged
@@ -3604,6 +3670,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 454742700}
   m_Mesh: {fileID: 548075944402340060, guid: 86a2879b0dd2785468177138de2e7f1e, type: 3}
+--- !u!65 &454742704
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454742700}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0011178424, y: 0.017877663, z: 0.0008353997}
+  m_Center: {x: -0.000008544915, y: 0.000016510487, z: 0}
 --- !u!1 &467435498
 GameObject:
   m_ObjectHideFlags: 0
@@ -3745,6 +3832,7 @@ GameObject:
   - component: {fileID: 468941879}
   - component: {fileID: 468941878}
   - component: {fileID: 468941877}
+  - component: {fileID: 468941880}
   m_Layer: 0
   m_Name: WoodPlankLong (8)
   m_TagString: Untagged
@@ -3820,6 +3908,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1440819995}
   m_LocalEulerAnglesHint: {x: 0, y: 71.1, z: 0}
+--- !u!65 &468941880
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468941876}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0011178424, y: 0.017877663, z: 0.0008353997}
+  m_Center: {x: -0.000008544915, y: 0.000016510487, z: 0}
 --- !u!1 &511379636
 GameObject:
   m_ObjectHideFlags: 0
@@ -5870,6 +5979,7 @@ GameObject:
   - component: {fileID: 703796413}
   - component: {fileID: 703796412}
   - component: {fileID: 703796411}
+  - component: {fileID: 703796414}
   m_Layer: 0
   m_Name: WoodPlankLong (9)
   m_TagString: Untagged
@@ -5945,6 +6055,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1440819995}
   m_LocalEulerAnglesHint: {x: 0, y: 71.1, z: 0}
+--- !u!65 &703796414
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 703796410}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0011178424, y: 0.017877663, z: 0.0008353997}
+  m_Center: {x: -0.000008544915, y: 0.000016510487, z: 0}
 --- !u!4 &707999635 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6941898693696964378, guid: 7629b37850052a5459ff218700026bcf, type: 3}
@@ -6285,6 +6416,7 @@ GameObject:
   - component: {fileID: 843097841}
   - component: {fileID: 843097843}
   - component: {fileID: 843097842}
+  - component: {fileID: 843097844}
   m_Layer: 0
   m_Name: WoodPlankLong (27)
   m_TagString: Untagged
@@ -6360,6 +6492,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 843097840}
   m_Mesh: {fileID: 548075944402340060, guid: 86a2879b0dd2785468177138de2e7f1e, type: 3}
+--- !u!65 &843097844
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843097840}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0011178436, y: 0.017877666, z: 0.00083540595}
+  m_Center: {x: -0.000008544916, y: 0.000016510492, z: -0.000000007451961}
 --- !u!1 &845406857
 GameObject:
   m_ObjectHideFlags: 0
@@ -6615,6 +6768,7 @@ GameObject:
   - component: {fileID: 863063875}
   - component: {fileID: 863063877}
   - component: {fileID: 863063876}
+  - component: {fileID: 863063878}
   m_Layer: 0
   m_Name: WoodPlankLong (22)
   m_TagString: Untagged
@@ -6690,6 +6844,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 863063874}
   m_Mesh: {fileID: 548075944402340060, guid: 86a2879b0dd2785468177138de2e7f1e, type: 3}
+--- !u!65 &863063878
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 863063874}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0011178422, y: 0.017877663, z: 0.0008353996}
+  m_Center: {x: -0.000008544913, y: 0.000016510487, z: -1.2732914e-13}
 --- !u!1 &884586452
 GameObject:
   m_ObjectHideFlags: 0
@@ -7130,6 +7305,7 @@ MonoBehaviour:
   playerLevel: {fileID: 386606169}
   holyFlameCount: {fileID: 845406859}
   CurrentPlayerHP: {fileID: 2135881523}
+  BaseHP: {fileID: 1012510856}
   FavoursCount: {fileID: 1442183218}
   PlayerAttribute: {fileID: 11400000, guid: 1737ef63d68c28d418e9e7fcb15060e9, type: 2}
   PickableObject: {fileID: 11400000, guid: ac33e56992a31c74bbcb36792e181965, type: 2}
@@ -7667,6 +7843,7 @@ GameObject:
   - component: {fileID: 985058739}
   - component: {fileID: 985058741}
   - component: {fileID: 985058740}
+  - component: {fileID: 985058742}
   m_Layer: 0
   m_Name: WoodPlankLong (20)
   m_TagString: Untagged
@@ -7742,6 +7919,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 985058738}
   m_Mesh: {fileID: 548075944402340060, guid: 86a2879b0dd2785468177138de2e7f1e, type: 3}
+--- !u!65 &985058742
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985058738}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0011178423, y: 0.017877663, z: 0.00083539955}
+  m_Center: {x: -0.000008544914, y: 0.000016510487, z: 0}
 --- !u!1 &994953985
 GameObject:
   m_ObjectHideFlags: 0
@@ -7899,6 +8097,7 @@ GameObject:
   - component: {fileID: 1007501559}
   - component: {fileID: 1007501561}
   - component: {fileID: 1007501560}
+  - component: {fileID: 1007501562}
   m_Layer: 0
   m_Name: WoodPlankLong (19)
   m_TagString: Untagged
@@ -7974,6 +8173,163 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1007501558}
   m_Mesh: {fileID: 548075944402340060, guid: 86a2879b0dd2785468177138de2e7f1e, type: 3}
+--- !u!65 &1007501562
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1007501558}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0011178423, y: 0.017877664, z: 0.0008354009}
+  m_Center: {x: -0.000008552364, y: 0.000016510488, z: -1.5133133e-12}
+--- !u!1 &1012510854
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1012510855}
+  - component: {fileID: 1012510857}
+  - component: {fileID: 1012510856}
+  m_Layer: 5
+  m_Name: BaseHP
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1012510855
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012510854}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 274132940}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 20.700005, y: -96.8}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1012510856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012510854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 100
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: d919f76b83a6f534996ce3d8490254e2, type: 2}
+  m_sharedMaterial: {fileID: 6681479063745583770, guid: d919f76b83a6f534996ce3d8490254e2, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278209395
+  m_fontColor: {r: 0.45098042, g: 0.29411766, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 50
+  m_fontSizeBase: 50
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: -3.3042555, z: 55.060356, w: -18.559158}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1012510857
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012510854}
+  m_CullTransparentMesh: 1
 --- !u!1 &1017303726
 GameObject:
   m_ObjectHideFlags: 0
@@ -8309,6 +8665,7 @@ GameObject:
   - component: {fileID: 1052902949}
   - component: {fileID: 1052902951}
   - component: {fileID: 1052902950}
+  - component: {fileID: 1052902952}
   m_Layer: 0
   m_Name: WoodPlankLong (18)
   m_TagString: Untagged
@@ -8384,6 +8741,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1052902948}
   m_Mesh: {fileID: 548075944402340060, guid: 86a2879b0dd2785468177138de2e7f1e, type: 3}
+--- !u!65 &1052902952
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1052902948}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0011178423, y: 0.017877663, z: 0.0008353997}
+  m_Center: {x: -0.000008544914, y: 0.000016510487, z: 0}
 --- !u!1 &1073700960
 GameObject:
   m_ObjectHideFlags: 0
@@ -8611,6 +8989,7 @@ GameObject:
   - component: {fileID: 1094790016}
   - component: {fileID: 1094790018}
   - component: {fileID: 1094790017}
+  - component: {fileID: 1094790019}
   m_Layer: 0
   m_Name: WoodPlankLong (16)
   m_TagString: Untagged
@@ -8686,6 +9065,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1094790015}
   m_Mesh: {fileID: 548075944402340060, guid: 86a2879b0dd2785468177138de2e7f1e, type: 3}
+--- !u!65 &1094790019
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1094790015}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0011178423, y: 0.017877663, z: 0.00083539955}
+  m_Center: {x: -0.000008544914, y: 0.000016510487, z: 0}
 --- !u!1 &1109955882
 GameObject:
   m_ObjectHideFlags: 0
@@ -8833,6 +9233,7 @@ GameObject:
   - component: {fileID: 1129565489}
   - component: {fileID: 1129565491}
   - component: {fileID: 1129565490}
+  - component: {fileID: 1129565492}
   m_Layer: 0
   m_Name: WoodPlankLong (23)
   m_TagString: Untagged
@@ -8908,6 +9309,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1129565488}
   m_Mesh: {fileID: 548075944402340060, guid: 86a2879b0dd2785468177138de2e7f1e, type: 3}
+--- !u!65 &1129565492
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129565488}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0011178423, y: 0.01787766, z: 0.0008353996}
+  m_Center: {x: -0.000008544914, y: 0.000016510485, z: 0}
 --- !u!1001 &1166356173
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9401,6 +9823,7 @@ GameObject:
   - component: {fileID: 1297658274}
   - component: {fileID: 1297658273}
   - component: {fileID: 1297658272}
+  - component: {fileID: 1297658275}
   m_Layer: 0
   m_Name: WoodPlankLong (5)
   m_TagString: Untagged
@@ -9476,6 +9899,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1440819995}
   m_LocalEulerAnglesHint: {x: 0, y: 106.194, z: 0}
+--- !u!65 &1297658275
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297658271}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0011178426, y: 0.017877664, z: 0.0008353999}
+  m_Center: {x: -0.000008544916, y: 0.000016510488, z: 0}
 --- !u!1 &1305114332
 GameObject:
   m_ObjectHideFlags: 0
@@ -9487,6 +9931,7 @@ GameObject:
   - component: {fileID: 1305114335}
   - component: {fileID: 1305114334}
   - component: {fileID: 1305114333}
+  - component: {fileID: 1305114336}
   m_Layer: 0
   m_Name: WoodPlankLong (4)
   m_TagString: Untagged
@@ -9562,6 +10007,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1440819995}
   m_LocalEulerAnglesHint: {x: 0, y: 144.688, z: 0}
+--- !u!65 &1305114336
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1305114332}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0011178423, y: 0.017877663, z: 0.0008353998}
+  m_Center: {x: -0.000008544914, y: 0.000016510487, z: -2.5465827e-13}
 --- !u!1 &1311357933
 GameObject:
   m_ObjectHideFlags: 0
@@ -9573,6 +10039,7 @@ GameObject:
   - component: {fileID: 1311357936}
   - component: {fileID: 1311357935}
   - component: {fileID: 1311357934}
+  - component: {fileID: 1311357937}
   m_Layer: 0
   m_Name: WoodPlankLong (10)
   m_TagString: Untagged
@@ -9648,6 +10115,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1440819995}
   m_LocalEulerAnglesHint: {x: 0, y: 71.1, z: 0}
+--- !u!65 &1311357937
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1311357933}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0011178424, y: 0.017877663, z: 0.0008353997}
+  m_Center: {x: -0.000008544915, y: 0.000016510487, z: 0}
 --- !u!1 &1322961734
 GameObject:
   m_ObjectHideFlags: 0
@@ -11034,6 +11522,7 @@ GameObject:
   - component: {fileID: 1547997080}
   - component: {fileID: 1547997079}
   - component: {fileID: 1547997078}
+  - component: {fileID: 1547997081}
   m_Layer: 0
   m_Name: WoodPlankLong (2)
   m_TagString: Untagged
@@ -11109,6 +11598,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1440819995}
   m_LocalEulerAnglesHint: {x: 0, y: 71.1, z: 0}
+--- !u!65 &1547997081
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1547997077}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0011178423, y: 0.017877664, z: 0.00083539967}
+  m_Center: {x: -0.000008544914, y: 0.000016510488, z: -2.5465827e-13}
 --- !u!1 &1558398651
 GameObject:
   m_ObjectHideFlags: 0
@@ -13051,6 +13561,7 @@ GameObject:
   - component: {fileID: 1777892083}
   - component: {fileID: 1777892082}
   - component: {fileID: 1777892081}
+  - component: {fileID: 1777892084}
   m_Layer: 0
   m_Name: WoodPlankLong (1)
   m_TagString: Untagged
@@ -13126,6 +13637,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1440819995}
   m_LocalEulerAnglesHint: {x: 0, y: 71.1, z: 0}
+--- !u!65 &1777892084
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1777892080}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0011178423, y: 0.017877664, z: 0.00083539967}
+  m_Center: {x: -0.000008544914, y: 0.000016510488, z: -2.5465827e-13}
 --- !u!1 &1789391803
 GameObject:
   m_ObjectHideFlags: 0
@@ -13674,6 +14206,7 @@ GameObject:
   - component: {fileID: 1838024068}
   - component: {fileID: 1838024070}
   - component: {fileID: 1838024069}
+  - component: {fileID: 1838024071}
   m_Layer: 0
   m_Name: WoodPlankLong (24)
   m_TagString: Untagged
@@ -13749,6 +14282,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1838024067}
   m_Mesh: {fileID: 548075944402340060, guid: 86a2879b0dd2785468177138de2e7f1e, type: 3}
+--- !u!65 &1838024071
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1838024067}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0011178423, y: 0.017877663, z: 0.0008353997}
+  m_Center: {x: -0.000008544914, y: 0.000016510487, z: 0}
 --- !u!1 &1850879387
 GameObject:
   m_ObjectHideFlags: 0
@@ -13760,6 +14314,7 @@ GameObject:
   - component: {fileID: 1850879390}
   - component: {fileID: 1850879389}
   - component: {fileID: 1850879388}
+  - component: {fileID: 1850879391}
   m_Layer: 0
   m_Name: WoodPlankLong (12)
   m_TagString: Untagged
@@ -13835,6 +14390,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1440819995}
   m_LocalEulerAnglesHint: {x: 0, y: 10.882, z: 0}
+--- !u!65 &1850879391
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850879387}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0011178424, y: 0.017877663, z: 0.0008353997}
+  m_Center: {x: -0.000008544915, y: 0.000016510487, z: 0}
 --- !u!1 &1856752256
 GameObject:
   m_ObjectHideFlags: 0
@@ -14007,6 +14583,7 @@ GameObject:
   - component: {fileID: 1864879210}
   - component: {fileID: 1864879212}
   - component: {fileID: 1864879211}
+  - component: {fileID: 1864879213}
   m_Layer: 0
   m_Name: WoodPlankLong (21)
   m_TagString: Untagged
@@ -14082,6 +14659,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1864879209}
   m_Mesh: {fileID: 548075944402340060, guid: 86a2879b0dd2785468177138de2e7f1e, type: 3}
+--- !u!65 &1864879213
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864879209}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0011178422, y: 0.017877663, z: 0.0008353996}
+  m_Center: {x: -0.000008544913, y: 0.000016510487, z: -1.2732914e-13}
 --- !u!1001 &1866686677
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14275,6 +14873,7 @@ GameObject:
   - component: {fileID: 1914207669}
   - component: {fileID: 1914207671}
   - component: {fileID: 1914207670}
+  - component: {fileID: 1914207672}
   m_Layer: 0
   m_Name: WoodPlankLong (25)
   m_TagString: Untagged
@@ -14350,6 +14949,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1914207668}
   m_Mesh: {fileID: 548075944402340060, guid: 86a2879b0dd2785468177138de2e7f1e, type: 3}
+--- !u!65 &1914207672
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1914207668}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0011178423, y: 0.017877666, z: 0.0008353998}
+  m_Center: {x: -0.000008544914, y: 0.00001651049, z: 0}
 --- !u!1 &1914307301
 GameObject:
   m_ObjectHideFlags: 0
@@ -14971,6 +15591,7 @@ GameObject:
   - component: {fileID: 1989199953}
   - component: {fileID: 1989199955}
   - component: {fileID: 1989199954}
+  - component: {fileID: 1989199956}
   m_Layer: 0
   m_Name: WoodPlankLong (16)
   m_TagString: Untagged
@@ -15046,6 +15667,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1989199952}
   m_Mesh: {fileID: 548075944402340060, guid: 86a2879b0dd2785468177138de2e7f1e, type: 3}
+--- !u!65 &1989199956
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1989199952}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0011178423, y: 0.017877663, z: 0.00083539955}
+  m_Center: {x: -0.000008544914, y: 0.000016510487, z: 0}
 --- !u!1 &2014473278
 GameObject:
   m_ObjectHideFlags: 0
@@ -15277,6 +15919,7 @@ GameObject:
   - component: {fileID: 2029784355}
   - component: {fileID: 2029784354}
   - component: {fileID: 2029784353}
+  - component: {fileID: 2029784356}
   m_Layer: 0
   m_Name: WoodPlankLong (15)
   m_TagString: Untagged
@@ -15352,6 +15995,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1440819995}
   m_LocalEulerAnglesHint: {x: 0, y: 10.882, z: 0}
+--- !u!65 &2029784356
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029784352}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0011178424, y: 0.017877663, z: 0.0008353997}
+  m_Center: {x: -0.000008544915, y: 0.000016510487, z: 0}
 --- !u!1 &2035447943
 GameObject:
   m_ObjectHideFlags: 0
@@ -16264,6 +16928,7 @@ MonoBehaviour:
   pickableObjectData: {fileID: 11400000, guid: ac33e56992a31c74bbcb36792e181965, type: 2}
   PlayerCheckPoint: {fileID: 11400000, guid: c712bd2090291f64ab29c0c111eea882, type: 2}
   playerAttribute: {fileID: 11400000, guid: 1737ef63d68c28d418e9e7fcb15060e9, type: 2}
+  defeatScreen: {fileID: 699671800}
   canBePushed: 0
   playerIsDead: 0
 --- !u!114 &2057911518
@@ -16306,6 +16971,7 @@ GameObject:
   - component: {fileID: 2064201602}
   - component: {fileID: 2064201601}
   - component: {fileID: 2064201600}
+  - component: {fileID: 2064201603}
   m_Layer: 0
   m_Name: WoodPlankLong (14)
   m_TagString: Untagged
@@ -16381,6 +17047,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1440819995}
   m_LocalEulerAnglesHint: {x: 0, y: 71.1, z: 0}
+--- !u!65 &2064201603
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2064201599}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0011178423, y: 0.017877663, z: 0.0008353997}
+  m_Center: {x: -0.000008544914, y: 0.000016510487, z: 0}
 --- !u!1 &2071436543
 GameObject:
   m_ObjectHideFlags: 0
@@ -16500,6 +17187,7 @@ GameObject:
   - component: {fileID: 2075626028}
   - component: {fileID: 2075626027}
   - component: {fileID: 2075626026}
+  - component: {fileID: 2075626029}
   m_Layer: 0
   m_Name: WoodPlankLong (13)
   m_TagString: Untagged
@@ -16575,6 +17263,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1440819995}
   m_LocalEulerAnglesHint: {x: 0, y: 71.1, z: 0}
+--- !u!65 &2075626029
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2075626025}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0011178423, y: 0.017877663, z: 0.0008353997}
+  m_Center: {x: -0.000008544914, y: 0.000016510487, z: 0}
 --- !u!1 &2081063484
 GameObject:
   m_ObjectHideFlags: 0
@@ -16694,6 +17403,7 @@ GameObject:
   - component: {fileID: 2084514921}
   - component: {fileID: 2084514920}
   - component: {fileID: 2084514919}
+  - component: {fileID: 2084514922}
   m_Layer: 0
   m_Name: WoodPlankLong (3)
   m_TagString: Untagged
@@ -16769,6 +17479,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1440819995}
   m_LocalEulerAnglesHint: {x: 0, y: 72.69, z: 0}
+--- !u!65 &2084514922
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2084514918}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0011178424, y: 0.017877664, z: 0.0008353996}
+  m_Center: {x: -0.000008544915, y: 0.000016510488, z: 0}
 --- !u!1 &2087316995
 GameObject:
   m_ObjectHideFlags: 0
@@ -17348,7 +18079,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 212.2, y: -96.8}
+  m_AnchoredPosition: {x: 132.9, y: -96.8}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2135881523
@@ -17594,6 +18325,7 @@ GameObject:
   - component: {fileID: 2136996927}
   - component: {fileID: 2136996926}
   - component: {fileID: 2136996925}
+  - component: {fileID: 2136996928}
   m_Layer: 0
   m_Name: WoodPlankLong (11)
   m_TagString: Untagged
@@ -17669,6 +18401,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1440819995}
   m_LocalEulerAnglesHint: {x: 0, y: 49.925, z: 0}
+--- !u!65 &2136996928
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2136996924}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0011178423, y: 0.017877663, z: 0.0008353996}
+  m_Center: {x: -0.000008544914, y: 0.000016510487, z: 2.5465827e-13}
 --- !u!1001 &2142888534
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22684,6 +23437,7 @@ GameObject:
   - component: {fileID: 6704999127885204898}
   - component: {fileID: 4540599288932402705}
   - component: {fileID: 3578402577678521157}
+  - component: {fileID: 6704999127885204899}
   m_Layer: 0
   m_Name: WoodPlankLong
   m_TagString: Untagged
@@ -22766,6 +23520,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1440819995}
   m_LocalEulerAnglesHint: {x: 0, y: 3.7, z: 0}
+--- !u!65 &6704999127885204899
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3906989096557013221}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0011178423, y: 0.017877664, z: 0.0008353997}
+  m_Center: {x: -0.000008544914, y: 0.000016510488, z: 0}
 --- !u!1001 &6976202679777967978
 PrefabInstance:
   m_ObjectHideFlags: 0

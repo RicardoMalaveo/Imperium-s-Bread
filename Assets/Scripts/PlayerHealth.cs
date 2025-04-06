@@ -12,7 +12,6 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField]
     private TMP_Text FavoursCount;
     [SerializeField]
-
     private float InvulnerabilityTime = 0.2F;
     [SerializeField]
     private PickableObjectData pickableObjectData;
@@ -20,6 +19,8 @@ public class PlayerHealth : MonoBehaviour
     private PlayerCheckPointLocations PlayerCheckPoint;
     [SerializeField]
     private PlayerAttribute playerAttribute;
+    [SerializeField]
+    GameObject defeatScreen;
     private bool hit;
     public bool canBePushed;
     public bool playerIsDead;
@@ -27,8 +28,9 @@ public class PlayerHealth : MonoBehaviour
 
     private void Start()
     {
-        playerAttribute.playerBaseHealth = 100;
-        if(PlayerCheckPoint.currentCheckPoint!= new Vector3(0,0,0))
+        playerAttribute.currentHealth = playerAttribute.playerBaseHealth;
+        pickableObjectData.holyFlameCount = 5;
+        if (PlayerCheckPoint.currentCheckPoint!= new Vector3(0,0,0))
         {
             transform.position = PlayerCheckPoint.currentCheckPoint;
         }
@@ -57,10 +59,13 @@ public class PlayerHealth : MonoBehaviour
             {
                 playerIsDead = true;
                 playerAttribute.currentHealth = 0;
-                SceneManager.LoadScene(1);
-                transform.position = PlayerCheckPoint.currentCheckPoint;
-                playerAttribute.currentHealth = playerAttribute.playerBaseHealth;
-                pickableObjectData.holyFlameCount = 5;
+
+                defeatScreen.SetActive(true);
+                Time.timeScale = 0;
+                //SceneManager.LoadScene(1);
+                //transform.position = PlayerCheckPoint.currentCheckPoint;
+                //playerAttribute.currentHealth = playerAttribute.playerBaseHealth;
+                //pickableObjectData.holyFlameCount = 5;
             }
             else
             {

@@ -47,6 +47,21 @@ public class SceneController : MonoBehaviour
     }
     public void Continue()
     {
+        if(PlayerAttribute.currentHealth <= 0)
+        {
+            PlayerAttribute.currentHealth = PlayerAttribute.playerBaseHealth;
+            PickableObjectData.holyFlameCount = 5;
+            if (playerCheckPoint.currentCheckPoint != new Vector3(0, 0, 0))
+            {
+                transform.position = playerCheckPoint.currentCheckPoint;
+                SceneManager.LoadScene(1);
+            }
+            else
+            {
+                playerCheckPoint.respawnPoint = new Vector3(-0.32842F, 6.297F, -0.04942882F);
+                SceneManager.LoadScene(1);
+            }
+        }
         menuButton.SetActive(true);
         mainMenu.SetActive(false);
 

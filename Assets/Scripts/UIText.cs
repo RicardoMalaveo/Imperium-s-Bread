@@ -13,6 +13,8 @@ public class UIText : MonoBehaviour
     [SerializeField]
     private TMP_Text CurrentPlayerHP;
     [SerializeField]
+    private TMP_Text BaseHP;
+    [SerializeField]
     private TMP_Text FavoursCount;
     [SerializeField]
     private PlayerAttribute PlayerAttribute;
@@ -25,6 +27,7 @@ public class UIText : MonoBehaviour
         FavoursCount.text = PickableObject.favoursCount.ToString();
         holyFlameCount.text = PickableObject.holyFlameCount.ToString();
         CurrentPlayerHP.text ="/ " +PlayerAttribute.currentHealth.ToString();
+        BaseHP.text = PlayerAttribute.playerBaseHealth.ToString();
     }
 
 }
