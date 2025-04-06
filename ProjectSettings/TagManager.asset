@@ -12,6 +12,7 @@ TagManager:
   - GM
   - HolyFlame
   - Trap
+  - VictoryZone
   layers:
   - Default
   - TransparentFX

@@ -47,7 +47,6 @@ public class EnemyAttack : MonoBehaviour
         if (col.gameObject.CompareTag("Player"))
         {
             Strike = true;
-            Debug.Log(col.gameObject.CompareTag("Player"));
         }
     }
 

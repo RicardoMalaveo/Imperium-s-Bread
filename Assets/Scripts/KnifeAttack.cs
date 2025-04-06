@@ -15,10 +15,12 @@ public class KnifeAttack : MonoBehaviour
 
     private Vector3 attackDirection;
 
-    public EnemyHealth enemyHealth;
+    [SerializeField]
+    private EnemyHealth enemyHealth;
 
     private bool collided;
 
+    [SerializeField]
     private bool Strike;
 
     private void FixedUpdate()
@@ -37,19 +39,18 @@ public class KnifeAttack : MonoBehaviour
 
        if (Strike == true)
         {
-            Debug.Log("Attacking enemy");
-            enemyHealth.Damage(weaponDamage);
             Strike = false;
         }
     }
 
     private void OnTriggerEnter(Collider col)
     {
-        if(col.gameObject.CompareTag("FungalDemon"))
+        if (col.CompareTag("FungalDemon"))
         {
+            EnemyHealth enemyHealth = col.GetComponent<EnemyHealth>();
+            Debug.Log("Attacking enemy");
+            enemyHealth.Damage(weaponDamage);
             Strike = true;
         }
-    }
-
-        
+    }     
 }

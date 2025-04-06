@@ -13,10 +13,12 @@ public class EnemyHealth : MonoBehaviour
     private PickableObjectData PickableObjectData;
     public GameObject holyFlame;
     private int favourPoints = 10;
+    [SerializeField]
     private bool hit;
     public bool canBePushed;
 
-    public int currentHealth = 100;
+    [SerializeField]
+    private int currentHealth = 100;
 
     public void Damage(int weaponDamage)
     {

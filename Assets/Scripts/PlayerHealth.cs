@@ -6,12 +6,6 @@ public class PlayerHealth : MonoBehaviour
 {
     //UI variables
     [SerializeField]
-    private TMP_Text holyFlameCount;
-    [SerializeField]
-    private TMP_Text CurrentPlayerHP;
-    [SerializeField]
-    private TMP_Text FavoursCount;
-    [SerializeField]
     private float InvulnerabilityTime = 0.2F;
     [SerializeField]
     private PickableObjectData pickableObjectData;
@@ -62,10 +56,6 @@ public class PlayerHealth : MonoBehaviour
 
                 defeatScreen.SetActive(true);
                 Time.timeScale = 0;
-                //SceneManager.LoadScene(1);
-                //transform.position = PlayerCheckPoint.currentCheckPoint;
-                //playerAttribute.currentHealth = playerAttribute.playerBaseHealth;
-                //pickableObjectData.holyFlameCount = 5;
             }
             else
             {
