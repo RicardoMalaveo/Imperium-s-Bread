@@ -15,9 +15,6 @@ public class EnemyAttack : MonoBehaviour
 
     bool canAttack = true;
 
-
-    private bool collided;
-
     private bool Strike;
 
 

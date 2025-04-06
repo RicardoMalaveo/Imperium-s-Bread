@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 2652127370418279570}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.558, z: 0}
   m_LocalScale: {x: 0.025, y: 0.025, z: 0.025}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -4846,8 +4846,8 @@ GameObject:
   - component: {fileID: 4415213723358107183}
   - component: {fileID: 7962412771880112764}
   - component: {fileID: -4195415417392710195}
-  - component: {fileID: 4384837489209398486}
   - component: {fileID: 5233860526758453552}
+  - component: {fileID: 892680589856416147}
   m_Layer: 0
   m_Name: HolyFlame
   m_TagString: HolyFlame
@@ -4957,27 +4957,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a71f4e799d689f8408a687dd50e68ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!135 &4384837489209398486
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8692758004510351365}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.35
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &5233860526758453552
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5005,3 +4984,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &892680589856416147
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8692758004510351365}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.45, y: 0.53, z: 0.45}
+  m_Center: {x: 0, y: -0.42, z: 0}

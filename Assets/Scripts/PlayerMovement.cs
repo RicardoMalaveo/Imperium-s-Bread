@@ -35,11 +35,56 @@ public class PlayerMovement : MonoBehaviour
     public GameObject playerSprite;
     public Vector3 mouseLocation;
 
+    [SerializeField]
+    private RicktusAnimations ricktusAnimations;
+    [SerializeField]
+    private KnifeAttack knifeAttack;
+
+    [SerializeField]
+    private bool isMovingLeft;
+    [SerializeField]
+    private bool isLookingLeft;
+    [SerializeField]
+    private bool isMovingRight;
+    [SerializeField]
+    private bool isLookingRight;
+
+
+
+    //Sound variables
+    [SerializeField]
+    private AudioManager audioManager;
+    public AudioSource steps;
     void Update()
     {
+
+        if (Input.GetKey(KeyCode.W)|| Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
+        {
+            steps.enabled = true;
+        }
+        else
+        {
+            steps.enabled = false;
+        }
+            
+
+
         groundedDistance = (capsuleCharacterCollider.height / 2) + groundedDistanceBuffer;
 
         CheckGround();
+
+        if (isMovingLeft && isLookingLeft && !knifeAttack.attacking || isMovingRight && isLookingRight && !knifeAttack.attacking)
+        {
+            ricktusAnimations.SetAnimations(ricktusAnimations.running, true, 1.2f);
+        }
+        else if (isMovingLeft && isLookingRight && !knifeAttack.attacking || isMovingRight && isLookingLeft && !knifeAttack.attacking)
+        {
+            ricktusAnimations.SetAnimations(ricktusAnimations.BackWalking, true, 1.2f);
+        }
+        else if(!knifeAttack.attacking)
+        {
+            ricktusAnimations.SetAnimations(ricktusAnimations.idle, true, 1f);
+        }
     }
 
     private void FixedUpdate()
@@ -48,6 +93,9 @@ public class PlayerMovement : MonoBehaviour
         movementInput.x = Input.GetAxis("Horizontal");
         movementInput.y = Input.GetAxis("Vertical");
         var dashInput = Input.GetButtonDown("Jump");
+
+
+
         CharacterDirection();
 
 
@@ -107,11 +155,31 @@ public class PlayerMovement : MonoBehaviour
     {
         if(mouseLocation.x > Screen.currentResolution.width/2)
         {
+            isLookingLeft = false;
+            isLookingRight = true;
             playerBody.transform.localRotation = Quaternion.Euler(playerBody.rotation.x, 180, playerBody.rotation.z);
         }
         else
         {
+            isLookingLeft = true;
+            isLookingRight = false;
             playerBody.transform.localRotation = Quaternion.Euler(playerBody.rotation.x, 0, playerBody.rotation.z);
+        }
+
+        if(movementInput.x>0.1)
+        { 
+            isMovingLeft = false;
+            isMovingRight = true;
+        }
+        else if (movementInput.x<-0.1)
+        {
+            isMovingLeft = true;
+            isMovingRight = false;
+        }
+        else
+        {
+            isMovingLeft = false;
+            isMovingRight = false;
         }
     }
 

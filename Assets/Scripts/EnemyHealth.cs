@@ -30,10 +30,8 @@ public class EnemyHealth : MonoBehaviour
 
             if (currentHealth <= 0)
             {
-                currentHealth = 0;
-                Destroy(this.gameObject);
-                DropItem();
-                PickableObjectData.favoursCount += favourPoints;
+                StartCoroutine(Dying());
+
                 //enemy gets destroyed and there are particle effects on the place, along with items.
             }
             else
@@ -56,4 +54,15 @@ public class EnemyHealth : MonoBehaviour
         yield return new WaitForSeconds(InvulnerabilityTime);
         hit = false;
     }
+
+    private IEnumerator Dying()
+    {
+        gameObject.SetActive(false);
+        yield return new WaitForSeconds(0.5F);
+        currentHealth = 0;
+        DropItem();
+        PickableObjectData.favoursCount += favourPoints;
+        Destroy(gameObject);
+    }
+
 }

@@ -4,23 +4,23 @@ using UnityEngine.SceneManagement;
 
 public class VictoryZone : MonoBehaviour
 {
-    public  bool enemiesInVictoryZone;
+    public  bool enemiesInVictoryZone = false;
 
-    private void OnTriggerExit(Collider col)
+    void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.CompareTag("FungalDemon"))
+        if (col.CompareTag("FungalDemon"))
         {
-            Debug.Log("enemy gone");
-            enemiesInVictoryZone = false;
+            enemiesInVictoryZone = true;
+
         }
     }
 
-    private void OnTriggerEnter(Collider col)
+    void OnTriggerExit(Collider col)
     {
-        if (col.gameObject.CompareTag("FungalDemon"))
+        if (col.CompareTag("FungalDemon"))
         {
-            Debug.Log("enemies in the area");
-            enemiesInVictoryZone = true;
+            enemiesInVictoryZone = false;
+
         }
     }
 }

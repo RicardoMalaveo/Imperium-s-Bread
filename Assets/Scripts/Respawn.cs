@@ -33,7 +33,7 @@ public class Respawn : MonoBehaviour
             Debug.Log("Player In victory area");
             playerInVictoryArea= true;
 
-            if (playerInVictoryArea && !victoryZone.enemiesInVictoryZone)
+            if (playerInVictoryArea  && !victoryZone.enemiesInVictoryZone)
             {
                 victoryScreen.SetActive(true);
 
