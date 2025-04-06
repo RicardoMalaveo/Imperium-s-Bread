@@ -1,12 +1,6 @@
-using NUnit.Framework;
-using System.Collections.Generic;
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.AI;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
-using System;
 using TMPro;
 public class PlayerHealth : MonoBehaviour
 {
@@ -33,7 +27,16 @@ public class PlayerHealth : MonoBehaviour
 
     private void Start()
     {
-        transform.position = PlayerCheckPoint.currentCheckPoint;
+        playerAttribute.playerBaseHealth = 100;
+        if(PlayerCheckPoint.currentCheckPoint!= new Vector3(0,0,0))
+        {
+            transform.position = PlayerCheckPoint.currentCheckPoint;
+        }
+        else
+        {
+            PlayerCheckPoint.respawnPoint = new Vector3(-0.32842F, 6.297F, -0.04942882F);
+        }
+
     }
     private void Update()
     {
