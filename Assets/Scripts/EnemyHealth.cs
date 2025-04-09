@@ -30,6 +30,7 @@ public class EnemyHealth : MonoBehaviour
 
             if (currentHealth <= 0)
             {
+                PickableObjectData.favoursCount += favourPoints;
                 StartCoroutine(Dying());
 
                 //enemy gets destroyed and there are particle effects on the place, along with items.
@@ -61,7 +62,6 @@ public class EnemyHealth : MonoBehaviour
         yield return new WaitForSeconds(0.5F);
         currentHealth = 0;
         DropItem();
-        PickableObjectData.favoursCount += favourPoints;
         Destroy(gameObject);
     }
 
